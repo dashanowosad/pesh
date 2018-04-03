@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
+
 using namespace std;
 void P_hack(char k[5], char A[9][9], int &z4, int &flag1)
 {
