@@ -4,7 +4,6 @@
 #include "functions.h"
 
 using namespace std;
-
 void p_forward(char k[5], char A[9][9], int &z1, int &flag1)
 {
 int t,i,j;

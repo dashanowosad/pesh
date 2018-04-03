@@ -5,10 +5,6 @@
 
 using namespace std;
 
-
-
-
-
 int main()
 {
 char A[9][9],k[5];
