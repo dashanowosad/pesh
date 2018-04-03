@@ -1,5 +1,5 @@
 CXX=g++
-CFLAGS =   -Wall -Werror
+CFLAGS = -Wall -Werror
 OBJECTS = build/main.o build/p_forward.o build/p_hack.o build/P_forward.o build/P_hack.o
 R=-I scr
 .PHONY: all clean
