@@ -8,4 +8,6 @@ void rook (char k[5], char A[9][9], int &z5, int &flag1);
 void Rook (char k[5], char A[9][9], int &z6, int &flag1);
 void horse (char k[5], char A[9][9], int &z7, int &flag1);
 void Horse (char k[5], char A[9][9], int &z8, int &flag1);
+void elephant (char k[5], char A[9][9], int &z9, int &flag1);
+void Elephant (char k[5], char A[9][9], int &z10, int &flag1);
 #endif

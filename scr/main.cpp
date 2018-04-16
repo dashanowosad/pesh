@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 char A[9][9],k[5];
-int i,j,z1=0,z2=0, z3=0,z4=0, z5=0,z6=0, z7=0, z8=0, flag1=0;
+int i,j,z1=0,z2=0, z3=0,z4=0, z5=0,z6=0, z7=0, z8=0, z9=0, z10=0, flag1=0;
 A[1][1]='R';
 A[1][2]='H';
 A[1][3]='E';
@@ -87,11 +87,13 @@ k[i]=getchar();
 
 if (flag1==0)
 {
-rook(k,A,z5,flag1);
+
 p_forward(k,A,z1,flag1);
 p_hack(k,A,z2,flag1);
+rook(k,A,z5,flag1);
 horse(k,A,z7,flag1);
-if ((z1==1)&&(z2==1)&&(z5==1)&&(z7==1)) {system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z1=0; z2=0;}
+elephant(k,A,z9,flag1);
+if ((z1==1)&&(z2==1)&&(z5==1)&&(z7==1)&&(z9==1)) {system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z1=0; z2=0;}
 else {z1=0; z2=0; z5=0;}
 }
 
@@ -101,7 +103,8 @@ Rook(k,A,z6,flag1);
 P_forward(k,A,z3,flag1);
 P_hack(k,A,z4,flag1);
 Horse(k,A,z8,flag1);
-if ((z3==1)&&(z4==1)&&(z6==1)&&(z8==1)) { system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z3=0; z4=0;}
+Elephant(k,A,z10,flag1);
+if ((z3==1)&&(z4==1)&&(z6==1)&&(z8==1)&&(z10==1)) { system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z3=0; z4=0;}
 else {z3=0; z4=0;}
 }
 
