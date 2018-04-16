@@ -5,7 +5,7 @@
 using namespace std;
 void rook (char k[5], char A[9][9], int &z5, int &flag1)
 {
-int i,j,m,n,t,e,p,q/*,o,h=0*/;
+int i,j,m,n,t,e,p,q,o,h=0;
 z5=0;
 
 for(m=97;m<=104;m++)
@@ -28,7 +28,7 @@ for(m=97;m<=104;m++)
 			if (n==97) e=1;
 			else if (n==98) e=2;
 			else if (n==99) e=3;
-			else if (n==100) e=4;
+			else if (n==100) e=4; 
 			else if (n==101) e=5;
 			else if (n==102) e=6;
 			else if (n==103) e=7;
@@ -36,10 +36,13 @@ for(m=97;m<=104;m++)
 			
 			if((k[0]==m)&&(k[1]==i)&&(k[3]==n)&&(k[4]==j)&&(A[p][t]=='r')&&((A[q][e]=='R')||(A[q][e]=='H')||(A[q][e]=='Q')||(A[q][e]=='K')||(A[q][e]=='E')||(A[q][e]=='P')||(A[q][e]==32))&& ((i==j)||(m==n))) 
 {
-//for(o=p-1;o>q;o--) {if ((m==n)&&(A[o][e]==32)) h++;}
-//for(o=q+1;o<p;o++) {if ((m==n)&&(A[o][e]==32)) h++;}
-/*if((p-q)==(h+1))*/ {A[q][e]=A[p][t]; A[p][t]=32;  system("clear"); flag1=1;}
-//(A[q][e-1]==32)
+if(p>q) {for(o=p-1;o>q;o--) {if(A[o][t]==32) h++; if((p-q)==(h+1)) {A[q][e]=A[p][t]; A[p][t]=32;  system("clear"); flag1=1;}}}
+else if(p<q) {for(o=p+1;o<q;o++) {if(A[o][t]==32) h++; if((q-p)==(h+1)) {A[q][e]=A[p][t]; A[p][t]=32; system("clear"); flag1=1;}}}
+else if(t>e) {for(o=t-1;o>e;o--) {if(A[p][o]==32) h++; if((t-e)==(h+1)) {A[q][e]=A[p][t]; A[p][t]=32; system("clear"); flag1=1;}}}
+else if(t<e) {for(o=t+1;o<e;o++) {if(A[p][o]==32) h++; if((e-t)==(h+1)) {A[q][e]=A[p][t]; A[p][t]=32; system("clear"); flag1=1;}}}
+
+
+
 }			}
 		}
 	}
