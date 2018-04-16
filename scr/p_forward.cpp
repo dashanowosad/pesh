@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
-
 using namespace std;
+
 void p_forward(char k[5], char A[9][9], int &z1, int &flag1)
 {
 int t,i,j;
@@ -41,4 +41,3 @@ else if ((k[0]=='b')&&(k[1]=='7')&&(k[2]='-')&&(k[3]=='b')&&(k[4]=='5')&&(A[5][2
 else if ((k[0]=='a')&&(k[1]=='7')&&(k[2]='-')&&(k[3]=='a')&&(k[4]=='5')&&(A[5][1]==32)&&(A[7][1]=='p')) {t=A[7][1]; A[7][1]=A[5][1]; A[5][1]=t; system("clear");flag1=1;}
 if (flag1!=1) z1=1;
 }
-
