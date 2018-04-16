@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
-
 using namespace std;
+
+
 
 int main()
 {
 char A[9][9],k[5];
-int i,j,z1=0,z2=0, z3=0,z4=0, flag1=0;
+int i,j,z1=0,z2=0, z3=0,z4=0, z5=0, flag1=0;
 A[1][1]='R';
 A[1][2]='H';
 A[1][3]='E';
@@ -45,7 +46,7 @@ A[8][6]='e';
 A[8][7]='h';
 A[8][8]='r';
 
-A[7][1]='p';
+A[7][1]='P';
 A[7][2]='p';
 A[7][3]='p';
 A[7][4]='p';
@@ -53,6 +54,7 @@ A[7][5]='p';
 A[7][6]='p';
 A[7][7]='p';
 A[7][8]='p';
+
 
 
 cout<<"1 | "<<A[1][1]<<" | "<<A[1][2]<<" | "<<A[1][3]<<" | "<<A[1][4]<<" | "<<A[1][5]<<" | "<<A[1][6]<<" | "<<A[1][7]<<" | "<<A[1][8]<<" |"<<endl;
@@ -83,12 +85,14 @@ for(i=0;i<=5;i++)
 k[i]=getchar();
 
 }
+
 if (flag1==0)
 {
 p_forward(k,A,z1,flag1);
 p_hack(k,A,z2,flag1);
-if ((z1==1)&&(z2==1)) {system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z1=0; z2=0;}
-else {z1=0; z2=0;}
+if((z1==1)&&(z2==1))rook(k,A,z5,flag1);
+if ((z1==1)&&(z2==1)&&(z5==1)) {system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z1=0; z2=0;}
+else {z1=0; z2=0; z5=0;}
 }
 
 else if (flag1==1)
