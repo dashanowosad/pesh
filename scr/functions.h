@@ -12,4 +12,6 @@ void elephant (char k[5], char A[9][9], int &z9, int &flag1);
 void Elephant (char k[5], char A[9][9], int &z10, int &flag1);
 void king (char k[5], char A[9][9], int &z11, int &flag1);
 void King (char k[5], char A[9][9], int &z12, int &flag1);
+void queen (char k[5], char A[9][9], int &z13, int &flag1);
+void Queen (char k[5], char A[9][9], int &z14, int &flag1);
 #endif

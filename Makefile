@@ -1,6 +1,6 @@
 CXX=g++
 CFLAGS =  -c -Wall -Werror
-OBJECTS = build/main.o build/p_forward.o build/p_hack.o build/P_forward.o build/P_hack.o build/rook.o build/Rook.o build/horse.o build/Horse.o build/elephant.o build/Elephant.o build/king.o build/King.o
+OBJECTS = build/main.o build/p_forward.o build/p_hack.o build/P_forward.o build/P_hack.o build/rook.o build/Rook.o build/horse.o build/Horse.o build/elephant.o build/Elephant.o build/king.o build/King.o build/queen.o build/Queen.o
 
 .PHONY: all clean
 
@@ -47,6 +47,12 @@ build/king.o: scr/king.cpp scr/functions.h
 
 build/King.o: scr/King.cpp scr/functions.h
 	$(CXX) $(CFLAGS) scr/King.cpp -o build/King.o
+
+build/queen.o: scr/queen.cpp scr/functions.h
+	$(CXX) $(CFLAGS) scr/queen.cpp -o build/queen.o
+
+build/Queen.o: scr/Queen.cpp scr/functions.h
+	$(CXX) $(CFLAGS) scr/Queen.cpp -o build/Queen.o
 
 build:
 	mkdir build

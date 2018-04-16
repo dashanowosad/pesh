@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 char A[9][9],k[5];
-int i,j,z1=0,z2=0, z3=0,z4=0, z5=0,z6=0, z7=0, z8=0, z9=0, z10=0, z11=0, z12=0,flag1=0;
+int i,j,z1=0,z2=0, z3=0,z4=0, z5=0,z6=0, z7=0, z8=0, z9=0, z10=0, z11=0, z12=0, z13=0, z14=0,flag1=0;
 A[1][1]='R';
 A[1][2]='H';
 A[1][3]='E';
@@ -94,7 +94,8 @@ rook(k,A,z5,flag1);
 horse(k,A,z7,flag1);
 elephant(k,A,z9,flag1);
 king(k,A,z11,flag1);
-if ((z1==1)&&(z2==1)&&(z5==1)&&(z7==1)&&(z9==1)&&(z11==1)) {system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z1=0; z2=0;}
+queen(k,A,z13,flag1);
+if ((z1==1)&&(z2==1)&&(z5==1)&&(z7==1)&&(z9==1)&&(z11==1)&&(z13==1)) {system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z1=0; z2=0;}
 else {z1=0; z2=0; z5=0;}
 }
 
@@ -106,7 +107,8 @@ P_hack(k,A,z4,flag1);
 Horse(k,A,z8,flag1);
 Elephant(k,A,z10,flag1);
 King(k,A,z12,flag1);
-if ((z3==1)&&(z4==1)&&(z6==1)&&(z8==1)&&(z10==1)&&(z12==1)) { system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z3=0; z4=0;}
+Queen(k,A,z14,flag1);
+if ((z3==1)&&(z4==1)&&(z6==1)&&(z8==1)&&(z10==1)&&(z12==1)&&(z14==1)) { system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z3=0; z4=0;}
 else {z3=0; z4=0;}
 }
 
