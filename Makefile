@@ -1,6 +1,6 @@
 CXX=g++
 CFLAGS =  -c -Wall -Werror
-OBJECTS = build/main.o build/p_forward.o build/p_hack.o build/P_forward.o build/P_hack.o build/rook.o
+OBJECTS = build/main.o build/p_forward.o build/p_hack.o build/P_forward.o build/P_hack.o build/rook.o build/Rook.o
 
 .PHONY: all clean
 
@@ -26,6 +26,9 @@ build/P_hack.o: scr/P_hack.cpp scr/functions.h
 
 build/rook.o: scr/rook.cpp scr/functions.h
 	$(CXX) $(CFLAGS) scr/rook.cpp -o build/rook.o
+
+build/Rook.o: scr/Rook.cpp scr/functions.h
+	$(CXX) $(CFLAGS) scr/Rook.cpp -o build/Rook.o
 
 build:
 	mkdir build

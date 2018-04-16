@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 char A[9][9],k[5];
-int i,j,z1=0,z2=0, z3=0,z4=0, z5=0, flag1=0;
+int i,j,z1=0,z2=0, z3=0,z4=0, z5=0,z6=0, flag1=0;
 A[1][1]='R';
 A[1][2]='H';
 A[1][3]='E';
@@ -99,7 +99,8 @@ else if (flag1==1)
 {
 P_forward(k,A,z3,flag1);
 P_hack(k,A,z4,flag1);
-if ((z3==1)&&(z4==1)) { system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z3=0; z4=0;}
+if((z3==1)&&(z4==1)) Rook(k,A,z6,flag1);
+if ((z3==1)&&(z4==1)&&(z6==1)) { system("clear");cout<<"ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕНЮ ПОПРОБУЙТЕ ЕЩЕ РАЗ"<<endl; puts("\n");z3=0; z4=0;}
 else {z3=0; z4=0;}
 }
 
