@@ -10,4 +10,6 @@ void horse (char k[5], char A[9][9], int &z7, int &flag1);
 void Horse (char k[5], char A[9][9], int &z8, int &flag1);
 void elephant (char k[5], char A[9][9], int &z9, int &flag1);
 void Elephant (char k[5], char A[9][9], int &z10, int &flag1);
+void king (char k[5], char A[9][9], int &z11, int &flag1);
+void King (char k[5], char A[9][9], int &z12, int &flag1);
 #endif
