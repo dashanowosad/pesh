@@ -1,11 +1,12 @@
-#include <iostream>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
-using namespace std;
-void P_hack(char k[5], char A[9][9], int &z4, int &flag1)
+
+int P_hack(char k[5], char A[9][9])
 {
-z4=0;
+int flag1;
+
 int i=50,j;
 for(j=2;j<8;j++)
 {
@@ -24,5 +25,6 @@ else if ((k[0]=='b')&&(k[1]==i)&&(k[2]='-')&&(k[3]=='a')&&(k[4]==i+1)&&((A[j+1][
 else if ((k[0]=='a')&&(k[1]==i)&&(k[2]='-')&&(k[3]=='b')&&(k[4]==i+1)&&((A[j+1][2]=='r')||(A[j+1][2]=='h')||(A[j+1][2]=='e')||(A[j+1][2]=='k')||(A[j+1][2]=='q')||(A[j+1][2]=='p'))&&(A[j][1]=='P')) {A[j+1][2]=A[j][1]; A[j][1]=32;  system("clear");flag1=0;}
 i++;
 }
-if (flag1!=0) z4=1;
+if (flag1!=0) return 1;
+else return 0;
 }

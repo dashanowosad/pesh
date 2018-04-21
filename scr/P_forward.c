@@ -1,11 +1,12 @@
-#include <iostream>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
-using namespace std;
-void P_forward(char k[5], char A[9][9], int &z3, int &flag1)
+
+int P_forward(char k[5], char A[9][9])
 {
-z3=0;
+int flag1;
+
 int i=50,j;
 for (j=2;j<8;j++)
 {
@@ -36,5 +37,6 @@ else if ((k[0]=='c')&&(k[1]=='2')&&(k[2]='-')&&(k[3]=='c')&&(k[4]=='4')&&(A[4][3
 else if ((k[0]=='b')&&(k[1]=='2')&&(k[2]='-')&&(k[3]=='b')&&(k[4]=='4')&&(A[4][2]==32)&&(A[2][2]=='P')) {A[4][2]=A[2][2]; A[2][2]=32; system("clear");flag1=0;}
 //1
 else if ((k[0]=='a')&&(k[1]=='2')&&(k[2]='-')&&(k[3]=='a')&&(k[4]=='4')&&(A[4][1]==32)&&(A[2][1]=='P')) {A[4][1]=A[2][1]; A[2][1]=32; system("clear");flag1=0;}
-if (flag1!=0) z3=1;
+if (flag1!=0) return 1;
+else return 0;
 }
