@@ -91,6 +91,54 @@ int result = P_hack(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+CTEST (E_figure, Correct_elephant)
+{
+char k[5], A[9][9];
+k[0]='f';
+k[1]='8';
+k[2]='-';
+k[3]='h';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[6][8]='P';
+A[8][6]='e';
+int result = elephant(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
+
+CTEST (E_figure, Correct_Elephant)
+{
+char k[5], A[9][9];
+k[0]='c';
+k[1]='1';
+k[2]='-';
+k[3]='a';
+k[4]='3';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[3][1]='p';
+A[1][3]='E';
+int result = Elephant(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
+
+
+
+
+
 
 
 //INCORRECT
@@ -181,6 +229,51 @@ int result = P_hack(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
+CTEST (E_figure, Incorrect_elephant)
+{
+char k[5], A[9][9];
+k[0]='f';
+k[1]='8';
+k[2]='-';
+k[3]='h';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[6][8]='P';
+A[8][6]='r';
+int result = elephant(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
+CTEST (E_figure, Incorrect_Elephant)
+{
+char k[5], A[9][9];
+k[0]='c';
+k[1]='1';
+k[2]='-';
+k[3]='b';
+k[4]='3';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[3][1]='p';
+A[1][3]='e';
+int result = Elephant(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
+
+
+
 
 
 int main(int argc, const char** argv) 
