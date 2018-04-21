@@ -1,5 +1,5 @@
 CXX=gcc
-CFLAGS =  -c -Wall -Werror
+CFLAGS =  -c -Wall -Werror -std=c99
 FLAGS  = -Wall -Werror
 OBJECTS = build/main.o build/p_forward.o build/p_hack.o build/P_forward.o build/P_hack.o build/rook.o build/Rook.o build/horse.o build/Horse.o build/elephant.o build/Elephant.o build/king.o build/King.o build/queen.o build/Queen.o
 
