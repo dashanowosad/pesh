@@ -135,7 +135,48 @@ int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
 
-
+CTEST (R_figure, Correct_Rook)
+{
+char k[5], A[9][9];
+k[0]='a';
+k[1]='1';
+k[2]='-';
+k[3]='a';
+k[4]='3';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[1][1]='R';
+A[1][3]='p';
+int result = Rook(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
+CTEST (R_figure, Correct_rook)
+{
+char k[5], A[9][9];
+k[0]='h';
+k[1]='8';
+k[2]='-';
+k[3]='h';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][8]='r';
+A[6][8]='P';
+int result = rook(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
 
 
 
@@ -272,7 +313,48 @@ int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
 
-
+CTEST (R_figure, Incorrect_Rook)
+{
+char k[5], A[9][9];
+k[0]='a';
+k[1]='1';
+k[2]='-';
+k[3]='b';
+k[4]='3';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[1][1]='R';
+A[1][3]='p';
+int result = Rook(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
+CTEST (R_figure, Incorrect_rook)
+{
+char k[5], A[9][9];
+k[0]='h';
+k[1]='8';
+k[2]='-';
+k[3]='g';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][8]='r';
+A[6][8]='P';
+int result = rook(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
 
 
 
