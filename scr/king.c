@@ -7,7 +7,6 @@ int king (char k[5], char A[9][9])
 {
 int flag1;
 int i,j,m,n,t,e,p,q;
-
 for(m=97;m<=104;m++)
 {
 	for(i=49;i<57;i++)
@@ -35,21 +34,21 @@ for(m=97;m<=104;m++)
 			else if (n==104) e=8;
 			
 			if (i==49) p=1; 
-			else if (i==50) p=1;
-			else if (i==51) p=2;
-			else if (i==52) p=3;
-			else if (i==53) p=4;
-			else if (i==54) p=5;
-			else if (i==55) p=6;
+			else if (i==50) p=2;
+			else if (i==51) p=3;
+			else if (i==52) p=4;
+			else if (i==53) p=5;
+			else if (i==54) p=6;
+			else if (i==55) p=7;
 			else if (i==56) p=8;
 			
 			if (j==49) q=1; 
-			else if (j==50) q=1;
-			else if (j==51) q=2;
-			else if (j==52) q=3;
-			else if (j==53) q=4;
-			else if (j==54) q=5;
-			else if (j==55) q=6;
+			else if (j==50) q=2;
+			else if (j==51) q=3;
+			else if (j==52) q=4;
+			else if (j==53) q=5;
+			else if (j==54) q=6;
+			else if (j==55) q=7;
 			else if (j==56) q=8;
 			
 			if((k[0]==m)&&(k[1]==i)&&(k[3]==n)&&(k[4]==j)&&(A[p][t]=='k')&&((A[q][e]=='R')||(A[q][e]=='H')||(A[q][e]=='Q')||(A[q][e]=='K')||(A[q][e]=='E')||(A[q][e]=='P')||(A[q][e]==32))&& ((m-n==1)||(n-m==1)||(i-j==1)||(j-i==1))) {A[q][e]=A[p][t]; A[p][t]=32;  system("clear"); flag1=1;}

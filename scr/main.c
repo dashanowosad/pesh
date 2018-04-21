@@ -9,7 +9,7 @@
 int main()
 {
 char A[9][9],k[5];
-int i,j,z1=0,z2=0, flag1=0;
+int i,j,z1=0,z2=0, z3=0, z4=0, z5=0, z6=0, z7=0, z8=0, z9=0, z10=0, z11=0, z12=0, z13=0, z14=0, flag1=0;
 A[1][1]='R';
 A[1][2]='H';
 A[1][3]='E';
@@ -81,6 +81,7 @@ printf("  |---|---|---|---|---|---|---|---|\n");
 printf("8 | %c | %c | %c | %c | %c | %c | %c | %c |",A[8][1],A[8][2],A[8][3],A[8][4],A[8][5],A[8][6],A[8][7],A[8][8]);
 printf("\n");
 printf("  |---|---|---|---|---|---|---|---|\n");
+printf("  | a | b | c | d | e | f | g | h |");
 printf("\n");
 printf("\n");
 
@@ -97,10 +98,31 @@ k[i]=getchar();
 
 
 
+if (flag1==0)
+{
+z5=rook(k,A);
 z1=p_forward(k,A);
 z2=p_hack(k,A);
-if((z1!=0)||(z2!=0)) printf("hfhuohwfa");
+z7=horse(k,A);
+z9=elephant(k,A);
+z11=king(k,A);
+z13=queen(k,A);
+if ((z1==1)&&(z2==1)&&(z5==1)&&(z7==1)&&(z9==1)&&(z11==1)&&(z13==1)) {system("clear");printf("ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕН ПОПРОБУЙТЕ ЕЩЕ РАЗ"); puts("\n");z1=0; z2=0;z5=0; z7=0; z9=0; z13=0;}
+else {z1=0; z2=0; z5=0; z7=0; z9=0; z13=0; flag1=1;}
+}
 
+else if (flag1==1)
+{
+z6=Rook(k,A);
+z3=P_forward(k,A);
+z4=P_hack(k,A);
+z8=Horse(k,A);
+z10=Elephant(k,A);
+z12=King(k,A);
+z14=Queen(k,A);
+if ((z3==1)&&(z4==1)&&(z6==1)&&(z8==1)&&(z10==1)&&(z12==1)&&(z14==1)) { system("clear");printf("ХОД НЕ ВОЗМОЖЕН ИЛИ НЕ ВЕРЕН ПОПРОБУЙТЕ ЕЩЕ РАЗ"); puts("\n");z3=0; z4=0; z8=0; z10=0; z12=0; z14=0;}
+else {z3=0; z4=0; z8=0; z10=0; z12=0; z14=0; flag1=0;}
+}
 
 printf("1 | %c | %c | %c | %c | %c | %c | %c | %c |",A[1][1],A[1][2],A[1][3],A[1][4],A[1][5],A[1][6],A[1][7],A[1][8]);
 printf("\n");
