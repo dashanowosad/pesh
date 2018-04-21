@@ -7,7 +7,9 @@ OB = build/main_test.o build/p_forward.o build/p_hack.o build/P_forward.o build/
 
 .PHONY: all clean
 
-default: bin/prog
+
+
+all: bin build bin/prog
 
 test: bin/prog_test
 	bin/prog_test
@@ -72,7 +74,7 @@ build:
 bin:
 	mkdir bin 
 clean:
-	-rm -rf build/* bin/*
+	-rm -rf build bin
 
 
 	
