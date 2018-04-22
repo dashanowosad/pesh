@@ -219,7 +219,49 @@ int result = Horse(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+CTEST (Q_figure, Correct_Queen)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='d';
+k[4]='5';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='Q';
+A[5][4]='p';
+int result = Queen(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
 
+CTEST (Q_figure, Correct_queen)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='d';
+k[4]='5';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='q';
+A[5][4]='P';
+int result = queen(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
 
 
 //INCORRECT
@@ -438,6 +480,54 @@ int result = Horse(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
+
+CTEST (Q_figure, Incorrect_Queen)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='c';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='h';
+A[6][3]='p';
+int result = Queen(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
+
+CTEST (Q_figure, Incorrect_queen)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='c';
+k[4]='5';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='q';
+A[5][3]='p';
+int result = queen(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
+
+
+
+
 
 int main(int argc, const char** argv) 
 {
