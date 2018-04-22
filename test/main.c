@@ -631,6 +631,7 @@ ASSERT_EQUAL(expected,result);
 
 int main(int argc, const char** argv) 
 {
-    return ctest_main(argc, argv);
+    int test_res = ctest_main(argc, argv);
+    return test_res;
 }
 
