@@ -2,12 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
-
+#include <ncurses.h>
 
 
 
 int main()
 {
+system("clear");
 char A[9][9],k[5];
 int i,j,z1=0,z2=0, z3=0, z4=0, z5=0, z6=0, z7=0, z8=0, z9=0, z10=0, z11=0, z12=0, z13=0, z14=0, flag1=0;
 A[1][1]='R';
@@ -98,6 +99,7 @@ k[i]=getchar();
 
 
 
+
 if (flag1==0)
 {
 z5=rook(k,A);
@@ -152,10 +154,7 @@ printf("  |---|---|---|---|---|---|---|---|\n");
 printf("  | a | b | c | d | e | f | g | h |");
 printf("\n");
 printf("\n");
-
-
 }
-
 return 0;
 }
 
