@@ -5,7 +5,7 @@
 
 int P_forward(char k[5], char A[9][9])
 {
-int flag1;
+int flag1=1;;
 
 int i=50,j;
 for (j=2;j<8;j++)
