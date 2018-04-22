@@ -377,8 +377,8 @@ for (int i=0;i<9;i++)
 		A[i][j]=32;
 	}
 }
-A[4][8]=32;
-A[2][8]='R';
+A[4][7]=32;
+A[2][8]='P';
 int result = P_forward(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
