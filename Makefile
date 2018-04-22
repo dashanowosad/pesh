@@ -7,6 +7,8 @@ OB = build/main_test.o build/p_forward.o build/p_hack.o build/P_forward.o build/
 
 .PHONY: clean
 
+all: default test
+
 default: bin/prog
 
 test: bin/prog_test
