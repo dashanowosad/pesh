@@ -4,6 +4,7 @@
 #include <ctest.h>
 
 //CORRECT
+
 CTEST (P_figure, Correct_p_forward)
 {
 char k[5], A[9][9];
@@ -70,6 +71,7 @@ int result = P_forward(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (P_figure, Correct_P_hack)
 {
 char k[5], A[9][9];
@@ -91,6 +93,7 @@ int result = P_hack(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (E_figure, Correct_elephant)
 {
 char k[5], A[9][9];
@@ -156,6 +159,7 @@ int result = Rook(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (R_figure, Correct_rook)
 {
 char k[5], A[9][9];
@@ -177,6 +181,7 @@ int result = rook(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (H_figure, Correct_horse)
 {
 char k[5], A[9][9];
@@ -198,6 +203,7 @@ int result = horse(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (H_figure, Correct_Horse)
 {
 char k[5], A[9][9];
@@ -219,6 +225,7 @@ int result = Horse(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (Q_figure, Correct_Queen)
 {
 char k[5], A[9][9];
@@ -262,6 +269,51 @@ int result = queen(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
+
+CTEST (K_figure, Correct_king)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='d';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='k';
+A[6][4]='P';
+int result = king(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
+
+CTEST (K_figure, Correct_King)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='d';
+k[4]='7';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='K';
+A[7][4]='h';
+int result = King(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
+
 
 
 //INCORRECT
@@ -331,6 +383,7 @@ int result = P_forward(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (P_figure, Incorrect_P_hack)
 {
 char k[5], A[9][9];
@@ -352,6 +405,7 @@ int result = P_hack(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (E_figure, Incorrect_elephant)
 {
 char k[5], A[9][9];
@@ -373,6 +427,7 @@ int result = elephant(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (E_figure, Incorrect_Elephant)
 {
 char k[5], A[9][9];
@@ -416,6 +471,7 @@ int result = Rook(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (R_figure, Incorrect_rook)
 {
 char k[5], A[9][9];
@@ -459,6 +515,7 @@ int result = horse(k,A);
 int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
+
 CTEST (H_figure, Incorrect_Horse)
 {
 char k[5], A[9][9];
@@ -525,6 +582,49 @@ int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
 
+CTEST (K_figure, Incorrect_king)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='d';
+k[4]='5';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='k';
+A[5][4]='P';
+int result = king(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
+
+CTEST (K_figure, Incorrect_King)
+{
+char k[5], A[9][9];
+k[0]='d';
+k[1]='8';
+k[2]='-';
+k[3]='d';
+k[4]='5';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][4]='K';
+A[5][4]='h';
+int result = King(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
 
 
 
