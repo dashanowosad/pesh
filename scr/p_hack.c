@@ -5,7 +5,7 @@
 
 int p_hack(char k[5], char A[9][9])
 {
-int flag1=1;
+int flag1;
 
 int i,j;
 i=55; //number 7
