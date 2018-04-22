@@ -277,7 +277,7 @@ k[0]='d';
 k[1]='8';
 k[2]='-';
 k[3]='d';
-k[4]='6';  
+k[4]='7';  
 for (int i=0;i<9;i++)
 {
 	for(int j=0; j<9;j++)
@@ -286,7 +286,7 @@ for (int i=0;i<9;i++)
 	}
 }
 A[8][4]='k';
-A[6][4]='P';
+A[7][4]='P';
 int result = king(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
