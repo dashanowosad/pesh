@@ -177,8 +177,48 @@ int result = rook(k,A);
 int expected = 0;
 ASSERT_EQUAL(expected,result);
 }
-
-
+CTEST (H_figure, Correct_horse)
+{
+char k[5], A[9][9];
+k[0]='g';
+k[1]='8';
+k[2]='-';
+k[3]='h';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][7]='h';
+A[6][8]='P';
+int result = horse(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
+CTEST (H_figure, Correct_Horse)
+{
+char k[5], A[9][9];
+k[0]='b';
+k[1]='1';
+k[2]='-';
+k[3]='a';
+k[4]='3';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[1][2]='H';
+A[3][1]='p';
+int result = Horse(k,A);
+int expected = 0;
+ASSERT_EQUAL(expected,result);
+}
 
 
 
@@ -356,7 +396,48 @@ int expected = 1;
 ASSERT_EQUAL(expected,result);
 }
 
-
+CTEST (H_figure, Incorrect_horse)
+{
+char k[5], A[9][9];
+k[0]='g';
+k[1]='8';
+k[2]='-';
+k[3]='g';
+k[4]='6';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[8][7]='h';
+A[6][7]='P';
+int result = horse(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
+CTEST (H_figure, Incorrect_Horse)
+{
+char k[5], A[9][9];
+k[0]='b';
+k[1]='1';
+k[2]='-';
+k[3]='b';
+k[4]='3';  
+for (int i=0;i<9;i++)
+{
+	for(int j=0; j<9;j++)
+	{
+		A[i][j]=32;
+	}
+}
+A[1][2]='H';
+A[3][2]='p';
+int result = Horse(k,A);
+int expected = 1;
+ASSERT_EQUAL(expected,result);
+}
 
 int main(int argc, const char** argv) 
 {
