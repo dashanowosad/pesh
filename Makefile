@@ -5,8 +5,9 @@ OBJECTS = build/main.o build/p_forward.o build/p_hack.o build/P_forward.o build/
 
 OB = build/main_test.o build/p_forward.o build/p_hack.o build/P_forward.o build/P_hack.o build/rook.o build/Rook.o build/horse.o build/Horse.o build/elephant.o build/Elephant.o build/king.o build/King.o build/queen.o build/Queen.o
 
-.PHONY: all clean
+.PHONY: clean
 
+default: bin/prog
 
 test: bin/prog_test
 	bin/prog_test
