@@ -368,7 +368,7 @@ char k[5], A[9][9];
 k[0]='h';
 k[1]='2';
 k[2]='-';
-k[3]='h';
+k[3]='a';
 k[4]='4';  
 for (int i=0;i<9;i++)
 {
@@ -377,7 +377,7 @@ for (int i=0;i<9;i++)
 		A[i][j]=32;
 	}
 }
-A[4][8]='R';
+A[4][1]=32;
 A[2][8]='P';
 int result = P_forward(k,A);
 int expected = 1;
